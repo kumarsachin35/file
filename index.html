@@ -16,19 +16,18 @@
         data-aspect-ratio="1.04918"
         data-width="100%"
       >
-        <a href="https://tenor.com/en-IN/view/manja-gif-22885016">Manja Sticker</a
-        >from
+        <a href="https://tenor.com/en-IN/view/manja-gif-22885016">Manja Sticker</a>
+        from
         <a href="https://tenor.com/en-IN/search/manja-sticker-gifs">Manja Stickers</a>
       </div>
+
       <script
         type="text/javascript"
         async
         src="https://tenor.com/embed.js"
       ></script>
-      <audio autoplay loop>
-  <source src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav" type="audio/mpeg">
-</audio>
-      <h1>Aarushhhhhhhiiiii!!!🚨🚨🚨 </br>Wanna date me? 🥰🤗</h1>
+
+      <h1>Aaarushhhhhhhiiiii!!!🚨🚨🚨 <br>Wanna date me? 🥰🤗</h1>
       <p>~I am all yours</p>
 
       <div class="btn">
@@ -36,15 +35,20 @@
         <a href="no1.html">No</a>
       </div>
     </div>
+
+    <!-- 🎵 Background Music -->
     <iframe id="musicPlayer" width="0" height="0"
-src="https://www.youtube.com/embed/nyuo9-OjNNg?autoplay=1&loop=1&playlist=nyuo9-OjNNg&controls=0"
-frameborder="0" allow="autoplay">
-</iframe>
+      src="https://www.youtube.com/embed/nyuo9-OjNNg?autoplay=1&mute=1&loop=1&playlist=nyuo9-OjNNg&controls=0"
+      frameborder="0" allow="autoplay">
+    </iframe>
+
+    <!-- 🔊 Click se sound ON -->
     <script>
-document.addEventListener("click", function () {
-  var iframe = document.getElementById("musicPlayer");
-  iframe.src += "&mute=0";
-});
-</script>
+      document.addEventListener("click", function () {
+        var iframe = document.getElementById("musicPlayer");
+        iframe.src = iframe.src.replace("mute=1", "mute=0");
+      });
+    </script>
+
   </body>
 </html>
