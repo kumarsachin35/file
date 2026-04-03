@@ -66,18 +66,18 @@ function sendAnswer(answer) {
   }
 
   // send email
-emailjs.send("service_2c8qlvp", "template_ur1leec", {
-  message: answer,
-  time: new Date().toLocaleString(),
-  device: navigator.userAgent
-});.then(function(response) {
+  emailjs.send("service_2c8qlvp", "template_ur1leec", {
+    message: answer,
+    time: new Date().toLocaleString(),
+    device: navigator.userAgent
+  }).then(function(response) {
     console.log("Email sent!", response.status);
   }, function(error) {
     console.log("Failed...", error);
   });
+
 }
 </script>
-
 </body>
 </html>
 
