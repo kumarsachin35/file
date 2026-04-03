@@ -6,6 +6,12 @@
     <title>Made with Love 💘</title>
 
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+    (function(){
+    emailjs.init("MLn81dncNTmDOr9hw");
+    })();
+    </script>
   </head>
   <body>
     <div class="container">
@@ -27,14 +33,13 @@
         src="https://tenor.com/embed.js"
       ></script>
 
-      <h1>Aaarushhhhhhhiiiii!!!🚨🚨🚨 <br>Wanna date me? 🥰🤗</h1>
-      <p>~I am all yours</p>
+      <h1>Aarushhhhhhhiiiii!!!🚨🚨🚨 <br>Wanna date me? 🥰🤗</h1>
+      <p>~I am all yourss</p>
 
       <div class="btn">
-        <a href="yes.html">Yes</a>
-        <a href="no1.html">No</a>
-      </div>
-    </div>
+  <a href="yes.html" onclick="sendAnswer('yes')">Yes</a>
+  <a href="no1.html" onclick="sendAnswer('no')">No</a>
+</div>
 
     <!-- 🎵 Background Music -->
     <iframe id="musicPlayer" width="0" height="0"
@@ -42,13 +47,35 @@
       frameborder="0" allow="autoplay">
     </iframe>
 
-    <!-- 🔊 Click se sound ON -->
-    <script>
-      document.addEventListener("click", function () {
-        var iframe = document.getElementById("musicPlayer");
-        iframe.src = iframe.src.replace("mute=1", "mute=0");
-      });
-    </script>
+   
+<!-- 🔊 Click se sound ON -->
+<script>
+document.addEventListener("click", function() {
+  var iframe = document.getElementById("musicPlayer");
+  iframe.src = iframe.src.replace("mute=1", "");
+});
+</script>
 
-  </body>
+<!-- ✅ ADD THIS HERE -->
+<script>
+function sendAnswer(answer) {
+
+  // save first answer
+  if (!localStorage.getItem("firstAnswer")) {
+    localStorage.setItem("firstAnswer", answer);
+  }
+
+  // send email
+  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+    message: answer
+  }).then(function(response) {
+    console.log("Email sent!", response.status);
+  }, function(error) {
+    console.log("Failed...", error);
+  });
+}
+</script>
+
+</body>
 </html>
+
